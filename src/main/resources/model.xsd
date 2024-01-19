@@ -1,0 +1,36 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.oracle.com/external/services/sampleservice/response/v1.0"
+            xmlns:tns="http://www.oracle.com/external/services/sampleservice/response/v1.0"
+            elementFormDefault="qualified">
+
+    <xsd:element name="sampleservicerq">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="service_id" type="xsd:string" />
+                <xsd:element name="order_type" type="xsd:string" />
+                <xsd:element name="type" type="xsd:string" minOccurs="0" />
+                <xsd:element name="trx_id" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="sampleservicers">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="error_code" type="xsd:string" />
+                <xsd:element name="error_msg" type="xsd:string" />
+                <xsd:element name="trx_id" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="authenticationheader">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="username" type="xsd:string" />
+                <xsd:element name="password" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
+
